@@ -32,7 +32,7 @@ class Footer {
 	 */
 	public static function displayCredit() {
 
-		echo static::renderCredit();
+		echo wp_kses_post( static::renderCredit() );
 	}
 
 	/**
