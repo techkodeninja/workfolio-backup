@@ -14,7 +14,17 @@
 		<div class="branding-navigation">
 			<div class="site-branding">
 				<?php Backdrop\Theme\Site\display_site_title(); ?>
-				<?php Backdrop\Theme\Site\display_site_description(); ?>
+				<?php
+					$tagline = get_bloginfo( 'description' );
+
+					if ( ! empty( $tagline ) ) {
+						if ( $sep = Workfolio\Tools\Mod::get( 'branding_sep' ) ) : ?>
+							<span class="sep" aria-hidden="true"><?php echo esc_html( $sep ) ?></span>
+						<?php endif;
+
+						Backdrop\Theme\Site\display_site_description();
+					}
+				?>
 			</div>
 			<?php Backdrop\View\display( 'nav/menu', 'primary', [ 'location' => 'primary'] ); ?>
 		</div>
