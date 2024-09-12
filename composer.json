@@ -1,0 +1,48 @@
+{
+	"name": "backdrop-dev/backdrop",
+	"type": "classicpress-theme",
+	"description": "Backdrop is a next-generation starter theme designed to help theme authors write elegant, intelligent, and modern code.",
+	"keywords": [ "classicpress", "theme" ],
+	"homepage": "https://luthemes.com/portfolio/backdrop",
+	"license": "GPL-2.0-or-later",
+	"version": "0.0.2",
+	"authors": [
+		{
+			"name": "Benjamin Lu",
+			"email": "benlumia007@gmail.com",
+			"homepage": "https://luthemes.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Workfolio\\": "app"
+		}
+	},
+	"require": {
+		"php": ">=7.4",
+		"backdrop-dev/customize": "dev-develop",
+		"backdrop-dev/fonts": "dev-develop",
+		"backdrop-dev/framework": "dev-develop",
+		"backdrop-dev/languages": "dev-develop",
+		"backdrop-dev/mix": "dev-develop",
+		"backdrop-dev/pagination": "dev-develop",
+		"backdrop-dev/template-hierarchy": "dev-develop",
+		"backdrop-dev/template-manager": "dev-develop",
+		"backdrop-dev/theme": "dev-develop",
+		"backdrop-dev/view": "dev-develop"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"wptrt/wpthemereview": "*",
+		"php-parallel-lint/php-parallel-lint": "*"
+	},
+	"scripts": {
+		"lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs .",
+		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}

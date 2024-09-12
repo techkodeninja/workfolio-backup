@@ -1,0 +1,10 @@
+a {
+    color: navy;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+
+    &:hover {
+        color: red;
+    }
+}
